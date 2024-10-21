@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kirang+Haerang&display=swap" rel="stylesheet">
+    <title>Página da foca</title>
+</head>
+<style>
+    .layout {
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+        background-color:rgb(186, 186, 227);
+        padding: 30px;
+        font-family: 'Josefin Sans', cursive;
+    }
+    .conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-left: 70px;
+        margin-right: 70px;
+        margin-top: 100px;
+    }
+    img{
+        margin-left: 70px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        border: 5px solid rgba(255, 255, 255, 0.5);
+
+    }
+    .js {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .inputs {
+        margin: 0; 
+        padding: 10px;
+        background-color: rgb(186, 186, 227);
+        margin-bottom: 15px;
+    }
+    input {
+        margin: 5px 0; 
+        padding: 10px;
+    }
+    .final{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Josefin Sans', cursive;
+    }
+
+    button{
+        border-radius: 20px;
+    }
+    H1{
+        font-family: 'Kirang Haerang', cursive;
+        font-size: 60px;
+    }
+
+</style>
+<body>
+    <div class="layout">
+        <img src="c:\Users\duds2\Downloads\2077e26434846c2f6f25a63c0336d9dd.jpg">
+        <div class="conteudo">
+            <H1> Pergunte a Foca!</H1>
+            <h4>O que é o jogo pergunte a foca? Pergunte a foca é feito para que o usuário escolha dois números 
+                e a foca escolha um deles</h4>
+            <div class="começo">
+            <h2> Vamos começar!</h2>
+            </div>
+            <div class="js">
+            <div class="inputs">
+            <input type="text" placeholder="primeiro número" class="input1">
+            <input type="text" placeholder="segundo número" class="input2">
+            </div>
+            <button type="button" onclick="escolha()">Perguntar</button>
+            </div>
+        </div>    
+    </div>
+    <div class="final">
+    <h2> Este foi o jogo, espero que tenha gostado.</h2>
+    <h3> contato: duds2992@gmail.com</h3>
+    </div>
+</body>
+
+<script>
+    function escolha(){
+        var escolha = Math.floor(Math.random() * 10);
+        alert("A foca escolheu ")
+        if (escolha%2)
+	        alert("A foca escolheu "+document.querySelector(".input1").value)
+        else
+	        alert("A foca escolheu "+document.querySelector(".input2").value)
+    }
+</script>
+</html>
